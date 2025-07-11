@@ -48,7 +48,7 @@ const config: Config = {
         docsPluginId: 'classic', // Corresponds to the preset-classic's docs plugin instance
         config: {
           api: { // A unique name for your API spec
-            specPath: 'http://localhost:8000/api/v2/docs-json', // URL for runtime fetching
+            specPath: 'https://development.cloud.pragmacharge.com/api/v2/docs-json', // URL for runtime fetching
             outputDir: 'docs/api', // The directory for generated MDX files
             sidebarOptions: {
              groupPathsBy: "tag",
