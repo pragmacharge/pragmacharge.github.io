@@ -1,0 +1,144 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2e8555;
+  --ifm-color-primary-dark: #29784c;
+  --ifm-color-primary-darker: #277148;
+  --ifm-color-primary-darkest: #205d3b;
+  --ifm-color-primary-light: #33925d;
+  --ifm-color-primary-lighter: #359962;
+  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #25c2a0;
+  --ifm-color-primary-dark: #21af90;
+  --ifm-color-primary-darker: #1fa588;
+  --ifm-color-primary-darkest: #1a8870;
+  --ifm-color-primary-light: #29d5b0;
+  --ifm-color-primary-lighter: #32d8b4;
+  --ifm-color-primary-lightest: #4fddbf;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/*
+ * Target the sidebar menu links specifically to reset the text color.
+ * The openapi-docs theme applies its own colors, which we override here.
+ */
+.theme-doc-sidebar-container .menu__link.api-method {
+  color: var(--ifm-menu-link-color) !important; /* Use !important to force override */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* This pushes the badge to the right */
+  width: 100%;
+}
+
+/* When the link is active, Docusaurus applies a different color.
+ * This rule ensures that behavior is maintained for the link text.
+ */
+.theme-doc-sidebar-container .menu__link.api-method.menu__link--active {
+  color: var(--ifm-menu-link-color-active) !important;
+}
+
+
+/* Base styles for all method badges, now using ::after */
+.theme-doc-sidebar-container .menu__link.api-method::after {
+  content: ''; /* The text content is set per method below */
+  font-size: 0.6rem;
+  font-weight: 700;
+  padding: 3px 7px;
+  border-radius: 4px;
+  margin-left: 10px; /* Add some space between text and badge */
+  text-transform: uppercase;
+  color: white;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* --- Specific styles for each HTTP method --- */
+
+/* GET requests (Green/Teal) */
+.theme-doc-sidebar-container .menu__link.api-method.get::after {
+  content: 'get';
+  background-color: #26c598;
+}
+
+/* POST requests (Blue) */
+.theme-doc-sidebar-container .menu__link.api-method.post::after {
+  content: 'post';
+  background-color: #007bff;
+}
+
+/* PUT requests (Orange) */
+.theme-doc-sidebar-container .menu__link.api-method.put::after {
+  content: 'put';
+  background-color: #ff8c00;
+}
+
+/* PATCH requests (Yellow/Orange) */
+.theme-doc-sidebar-container .menu__link.api-method.patch::after {
+  content: 'patch';
+  background-color: #f5a623;
+}
+
+/* DELETE requests (Red) */
+.theme-doc-sidebar-container .menu__link.api-method.delete::after {
+  content: 'delete';
+  background-color: #dc3545;
+}
+
+/*
+ * When the link is active, we need to make sure our badge's background
+ * color and text color don't get overridden by Docusaurus's active link styles.
+ */
+.theme-doc-sidebar-container .menu__link.api-method.menu__link--active::after {
+    color: white !important;
+}
+
+/*
+ * This targets the container for the hero buttons
+ * and create more space below the tagline.
+ */
+.hero .buttons_src-pages-index-module,
+.hero .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* Added space above the buttons */
+}
+
+/*
+ * This overrides the default Docusaurus secondary button style, but only for the hero section.
+ * It adds a modern background color, a subtle border, and a shadow.
+ * We also add a margin here to create space between the buttons.
+ */
+.hero .button.button--secondary {
+  background-color: #444950; /* A slightly darker, more modern grey */
+  border: 1px solid #6c757d;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* Smooth transition for all properties on hover/focus */
+  margin: 0 12px; /* This adds 12px margin on each side, creating 24px of space between them */
+}
+
+/*
+ * This adds a "lift" effect when a user hovers or focuses on the buttons,
+ * making the UI feel more interactive.
+ */
+.hero .button.button--secondary:hover,
+.hero .button.button--secondary:focus {
+  background-color: #5a6268; /* Lighten the background on hover */
+  border-color: #8a939c;
+  color: #ffffff; /* Ensure text color stays white */
+  transform: translateY(-2px); /* Lift the button slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increase the shadow for a "lifted" effect */
+}
