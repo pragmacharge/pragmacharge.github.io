@@ -42,15 +42,6 @@ const config: Config = {
 
   plugins: [
     [
-      'docusaurus-plugin-proxy',
-      {
-        '/api': {
-          target: 'https://development.cloud.pragmacharge.com/api',
-          pathRewrite: { '^/api': '/api' },
-        },
-      },
-    ],
-    [
       'docusaurus-plugin-openapi-docs',
       {
         id: 'api', // Must be unique among plugin instances
