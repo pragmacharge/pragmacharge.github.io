@@ -35,7 +35,7 @@ jobs:
         run: npm ci
 
       - name: Clean API Docs
-        run: npx docusaurus gen-api-docs api
+        run: npx docusaurus clean-api-docs api
 
       - name: Generate API Docs
         run: npx docusaurus gen-api-docs api
