@@ -10,7 +10,7 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://pragmacharge.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/pragmacharge.github.io/',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   organizationName: 'pragmacharge', // Your GitHub org/user name.
@@ -48,7 +48,7 @@ const config: Config = {
         docsPluginId: 'classic', // Corresponds to the preset-classic's docs plugin instance
         config: {
           api: { // A unique name for your API spec
-            specPath: 'https://development.cloud.pragmacharge.com/api/v2/docs-json', // URL for runtime fetching
+            specPath: 'http://localhost:8000/api/v2/docs-json', // URL for runtime fetching
             outputDir: 'docs/api', // The directory for generated MDX files
             sidebarOptions: {
              groupPathsBy: "tag",
@@ -63,17 +63,22 @@ const config: Config = {
   themes: ['docusaurus-theme-openapi-docs'],
 
   themeConfig: {
-    image: 'img/pragmacharge.png',
+    image: '/img/pragmacharge.png',
     navbar: {
       title: 'PragmaCharge',
       logo: {
         alt: 'PragmaCharge Logo',
-        src: 'img/pragmacharge.png',
+        src: '/img/pragmacharge.png',
       },
       items: [
         {
-          to: '/docs/intro',
-          label: 'Introduction',
+          to: '/docs/m2m-auth-guide',
+          label: 'M2M',
+          position: 'left',
+        },
+        {
+          to: '/docs/filtering-and-sorting-guide',
+          label: 'Filtering and Sorting',
           position: 'left',
         },
         {

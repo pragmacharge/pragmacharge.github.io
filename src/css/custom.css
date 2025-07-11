@@ -102,3 +102,43 @@
 .theme-doc-sidebar-container .menu__link.api-method.menu__link--active::after {
     color: white !important;
 }
+
+/*
+ * This targets the container for the hero buttons
+ * and create more space below the tagline.
+ */
+.hero .buttons_src-pages-index-module,
+.hero .buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem; /* Added space above the buttons */
+}
+
+/*
+ * This overrides the default Docusaurus secondary button style, but only for the hero section.
+ * It adds a modern background color, a subtle border, and a shadow.
+ * We also add a margin here to create space between the buttons.
+ */
+.hero .button.button--secondary {
+  background-color: #444950; /* A slightly darker, more modern grey */
+  border: 1px solid #6c757d;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 8px; /* Slightly more rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease; /* Smooth transition for all properties on hover/focus */
+  margin: 0 12px; /* This adds 12px margin on each side, creating 24px of space between them */
+}
+
+/*
+ * This adds a "lift" effect when a user hovers or focuses on the buttons,
+ * making the UI feel more interactive.
+ */
+.hero .button.button--secondary:hover,
+.hero .button.button--secondary:focus {
+  background-color: #5a6268; /* Lighten the background on hover */
+  border-color: #8a939c;
+  color: #ffffff; /* Ensure text color stays white */
+  transform: translateY(-2px); /* Lift the button slightly */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Increase the shadow for a "lifted" effect */
+}

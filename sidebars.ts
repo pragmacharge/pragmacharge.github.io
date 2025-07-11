@@ -5,7 +5,8 @@ import apiSidebar from './docs/api/sidebar';
 const sidebars: SidebarsConfig = {
   // This is your single, primary sidebar for the entire site.
   tutorialSidebar: [
-    'intro', // Links to your docs/intro.md
+    'm2m-auth-guide',
+    'filtering-and-sorting-guide',
 
     {
       type: 'category',
