@@ -42,6 +42,15 @@ const config: Config = {
 
   plugins: [
     [
+      'docusaurus-plugin-proxy',
+      {
+        '/api': {
+          target: 'https://development.cloud.pragmacharge.com/api',
+          pathRewrite: { '^/api': '/api' },
+        },
+      },
+    ],
+    [
       'docusaurus-plugin-openapi-docs',
       {
         id: 'api', // Must be unique among plugin instances
@@ -50,11 +59,6 @@ const config: Config = {
           api: { // A unique name for your API spec
             specPath: 'https://development.cloud.pragmacharge.com/api/v2/docs-json', // URL for runtime fetching
             outputDir: 'docs/api', // The directory for generated MDX files
-            proxy: {
-              '/api': {
-                target: 'https://development.cloud.pragmacharge.com',
-              },
-            },
             sidebarOptions: {
              groupPathsBy: "tag",
              categoryLinkSource: "tag",
