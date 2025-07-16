@@ -73,7 +73,7 @@ const config: Config = {
       items: [
         {
           to: '/docs/m2m-auth-guide',
-          label: 'M2M',
+          label: 'M2M Authentication',
           position: 'left',
         },
         {
