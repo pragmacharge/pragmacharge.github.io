@@ -20,17 +20,17 @@ function HomepageHeader() {
           <Link
             className="button button--secondary button--lg"
             to="/docs/m2m-auth-guide">
-            M2M Guide
+            M2M Authentication
           </Link>
           <Link
             className="button button--secondary button--lg"
             to="/docs/filtering-and-sorting-guide">
-            Filtering and Sorting Guide
+            Filtering and Sorting
           </Link>
           <Link
             className="button button--secondary button--lg"
             to="/docs/category/api-reference">
-            Api Reference
+            API Reference
           </Link>
         </div>
       </div>
