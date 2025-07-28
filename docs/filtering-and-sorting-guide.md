@@ -1,6 +1,6 @@
 ---
 sidebar_position: 1
-title: Filtering and Sorting Guide
+title: Filtering and Sorting
 ---
 
 ## Filtering

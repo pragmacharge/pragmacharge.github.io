@@ -5,9 +5,16 @@ import apiSidebar from './docs/api/sidebar';
 const sidebars: SidebarsConfig = {
   // This is your single, primary sidebar for the entire site.
   tutorialSidebar: [
-    'm2m-auth-guide',
-    'filtering-and-sorting-guide',
-
+    {
+      type: 'category',
+      label: 'API Tutorials',
+      items: [
+        'm2m-auth-guide',
+        'pagination',
+        'including-nested-fields',
+        'filtering-and-sorting-guide',
+      ],
+    },
     {
       type: 'category',
       label: 'API Reference',
