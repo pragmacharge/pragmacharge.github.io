@@ -3,13 +3,15 @@ title: Generating M2M Tokens
 sidebar_label: M2M Authentication
 ---
 
-# Generating M2M Access Tokens
+# M2M Authentication
 
-To interact with protected API endpoints, your application must authenticate using a short-lived M2M (machine-to-machine) access token. These tokens are obtained by presenting your long-lived `client_id` and `client_secret` to the authentication endpoint.
+## Overview
 
-Contact us for the `client_id` and `client_secret`.
+To interact with protected API endpoints, your application must authenticate using a short-lived M2M (machine-to-machine) access token. This guide explains how to securely request and manage these tokens.
 
-This guide explains how to securely request and manage these tokens.
+## Obtaining a `client_id` and `client_secret`
+
+M2M access tokens are obtained by presenting your long-lived `client_id` and `client_secret` to the authentication endpoint. To obtain your `client_id` and `client_secret`, please contact PragmaCharge.
 
 ## The Client Credentials Flow
 
@@ -42,7 +44,7 @@ The request must have a `Content-Type` of `application/json` and include the fol
 
 ```bash
 curl -X POST \
-  [https://development.cloud.pragmacharge.com/api/v2/auth/token](https://development.cloud.pragmacharge.com/api/v2/auth/token) \
+  [https://cloud.pragmacharge.com/api/v2/auth/token](https://cloud.pragmacharge.com/api/v2/auth/token) \
   -H 'Content-Type: application/json' \
   -d '{
     "client_id": "YOUR_CLIENT_ID",

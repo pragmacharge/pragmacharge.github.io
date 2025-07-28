@@ -3,8 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'PragmaCharge API Docs',
-  tagline: 'Official API Documentation',
+  title: 'PragmaCharge Cloud Developer Hub',
+  tagline: 'API Documentation and Reference',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
