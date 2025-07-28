@@ -73,12 +73,7 @@ const config: Config = {
       items: [
         {
           to: '/docs/m2m-auth-guide',
-          label: 'M2M',
-          position: 'left',
-        },
-        {
-          to: '/docs/filtering-and-sorting-guide',
-          label: 'Filtering and Sorting',
+          label: 'API Tutorials',
           position: 'left',
         },
         {
