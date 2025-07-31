@@ -16,6 +16,8 @@ Unless otherwise specified, PragmaCharge API endpoints support filtering on both
 
 ```?status:state-of-charge:measured-at[lt]=2025-01-01T00:00:00Z```
 
+Note: the nested object does not need to have been "included" in the request in order to filter by its properties.
+
 ---
 
 ### Supported Operators
@@ -42,7 +44,7 @@ The following operators are supported. Note that if no `[operator]` is provided,
 Results can be sorted by using the `sort` query parameter.
 * **Multiple fields**: To sort by multiple fields, provide a comma-separated list of the fields in order of sorting precedence.
 * **Sort direction**: By default, fields are sorted in **ascending** order. To sort in **descending** order, prefix the field name with a hyphen (`-`).
-* **Nested fields**: Sorting supports both root and nested fields. Nested fields should be separated using a `:` in the same manner as for filtering (e.g. `status:state-of-charge:value`).
+* **Nested fields**: Sorting supports both root and nested fields. Nested fields should be separated using a `:` in the same manner as for filtering (e.g. `status:state-of-charge:value`). Note: the nested object does not need to have been "included" in the request in order to sort by its properties.
 
 **Example Sorting Query**:
 Sort by manufacturer in ascending order, then by the vehicle's state-of-charge value in descending order:
