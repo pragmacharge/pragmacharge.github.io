@@ -18,7 +18,7 @@ When fetching a single vehicle, the response does not include its real-time stat
 **Request without `include`:**
 
 ```bash
-curl -X GET '[https://development.cloud.pragmacharge.com/api/v2/vehicles/](https://development.cloud.pragmacharge.com/api/v2/vehicles/){vehicleId}' \
+curl -X GET '[https://cloud.pragmacharge.com/api/v2/vehicles/](https://cloud.pragmacharge.com/api/v2/vehicles/){vehicleId}' \
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 ```
 
@@ -36,7 +36,7 @@ curl -X GET '[https://development.cloud.pragmacharge.com/api/v2/vehicles/](https
 **Request with `include`:**
 
 ```bash
-curl -X GET '[https://development.cloud.pragmacharge.com/api/v2/vehicles/](https://development.cloud.pragmacharge.com/api/v2/vehicles/){vehicleId}?include=status' \
+curl -X GET '[https://cloud.pragmacharge.com/api/v2/vehicles/](https://cloud.pragmacharge.com/api/v2/vehicles/){vehicleId}?include=status' \
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 ```
 

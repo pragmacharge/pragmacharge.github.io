@@ -28,7 +28,7 @@ To get the first page of results, you can either omit the parameters (to use the
 The `offset` is `0` (or omitted).
 
 ```bash
-curl -X GET '[https://development.cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=0](https://development.cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=0)' \
+curl -X GET '[https://cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=0](https://cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=0)' \
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 ```
 
@@ -36,7 +36,7 @@ curl -X GET '[https://development.cloud.pragmacharge.com/api/v2/vehicles?limit=1
 The `offset` is `10`.
 
 ```bash
-curl -X GET '[https://development.cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=10](https://development.cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=10)' \
+curl -X GET '[https://cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=10](https://cloud.pragmacharge.com/api/v2/vehicles?limit=10&offset=10)' \
   -H 'Authorization: Bearer YOUR_ACCESS_TOKEN'
 ```
 
